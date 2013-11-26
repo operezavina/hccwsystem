@@ -1,9 +1,5 @@
 <h1>Admin Dashboard</h1>
 <h2></h2>
-<li><%= link_to "Manage User", users_path, id: "manage_users"  %></li><br>
-<li><%= link_to "Export Events", events_path, id: "manage_events"  %></li> <br>
-<li><%= link_to "Manage Projects", projects_path, id: "manage_projects"  %></li> <br>
-<li><%= link_to "Assign Projects", events_path, id: "manage_projects"  %></li> <br>
 <section>
   <%= calendar @events,  {:prev_text=>"prev   ", :next_text=>"   next"} do |event| %>
       <div><%= link_to event.name, events_path %> Project <%= link_to event.project ? event.project.name : "No project", event.user %>
